@@ -39,13 +39,16 @@
     display: flex;
     align-self: center;
 }
-
+.c-feed-item__logo--empty{
+    background-color: #D8D8D8
+}
 .c-feed-item__logo {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     height: 30px;
     width: 30px;
+    border-radius: 9999px;
 }
 .c-feed-item__logo-container {
     flex: 1;

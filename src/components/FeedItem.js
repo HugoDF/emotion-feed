@@ -27,12 +27,17 @@ const nameToLogo = {
     'Patty & Bun': 'http://static1.squarespace.com/static/57af5dea725e25de8d140404/t/57ed2fd3e6f2e1a3e7f160f1/1475162069607/round+p%26b-01.png?format=1000w',
     'TFL': 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS7F02-pl3gglbx7gp281FElwlHVVz5pL5YNBn0veRO7LtFZuA',
     'MEATliquor': 'https://contentpl-a.akamaihd.net/images/playlists/image/medium/182907.jpg',
-    'Modern Society': 'https://coffeejobsboard.com/wp-content/uploads/wpjobboard/company/16560/company-logo/modern-logo.jpg'
+    'Modern Society': 'https://coffeejobsboard.com/wp-content/uploads/wpjobboard/company/16560/company-logo/modern-logo.jpg',
+    'Bonbonniere': 'https://pbs.twimg.com/profile_images/553025434988728320/CgdhQ_gQ.png',
+    'Berliner Fernsehturm': 'https://www.berlin.de/binaries/asset/image_assets/3693193/source/1493198303/0x0/',
+    'Katz Orange Gmbh': 'https://www.katzorange.com/wp-content/uploads/2016/05/KO_Logo_White-01.png',
+    'Starbucks': 'https://images-na.ssl-images-amazon.com/images/I/81Nz6ZX8HhL._SL1500_.jpg'
 };
 
 const FeedItemLogo = ({ name }) => {
+    const logoUrl = nameToLogo[name];
     return (<div
-        className="c-feed-item__logo"
+        className={['c-feed-item__logo', !logoUrl && 'c-feed-item__logo--empty'].join(' ')}
         style={{ backgroundImage: `url('${nameToLogo[name]}')` }}>
     </div>);
 }
