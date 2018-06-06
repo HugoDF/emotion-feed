@@ -1,17 +1,49 @@
+# Emotion feed
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
-## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
-  - [`npm start`](#npm-start)
-  - [`npm test`](#npm-test)
-  - [`npm run build`](#npm-run-build)
-  - [`npm run eject`](#npm-run-eject)
+- [Emotion feed](#emotion-feed)
+  - [Setup](#setup)
+  - [Features](#features)
+    - [Setting emotions](#setting-emotions)
+    - [Search](#search)
+  - [Folder Structure](#folder-structure)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+
+## Setup
+
+In an environment with Node and npm, run:
+```
+npm install
+```
+To install dependencies, followed by:
+```
+npm start
+```
+To start the dev server.
+
+## Features
+
+### Setting emotions
+
+You can click on a transaction's emotion to set it to another emotion.
+
+These changes will disappear when the page is reloaded.
+
+### Search
+
+A fuzzy search is implemented using Fuse.js. if you search for a word or phrase eg. "TFL",
+it will return ranked results based on the transaction's description.
+
+You may also search by emotion (love, joy, hate, smile) by prepending the emotion with a colon eg. ":hate".
+
 
 ## Folder Structure
 
