@@ -42,7 +42,7 @@ class SearchBar extends React.Component {
             });
         }
         return (<div className="c-search-bar">
-            <img src={searchIcon} className="c-search-bar__icon" />
+            <img alt="search" src={searchIcon} className="c-search-bar__icon" />
             <input
                 className="c-search-bar__input"
                 disabled={!transactions}

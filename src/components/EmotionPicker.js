@@ -32,8 +32,9 @@ const EmotionSelector = ({ emotions, selectedEmotion, onSelectedEmotion }) => {
     return (<div
         className="c-emotion-picker__selector"
         style={{ width: `${emotions.length * 26 + 18}px`, left: `-${2 * 26 - 10}px` }}>
-        {emotions.map((emotion) => {
+        {emotions.map((emotion, i) => {
             return (<img
+                key={i}
                 className="c-emotion-picker__selector__image"
                 onClick={() => onSelectedEmotion(emotion.name)}
                 height="18"
@@ -69,8 +70,8 @@ class EmotionPicker extends React.Component {
         const displayImage = fullEmotion
             ? fullEmotion.displayImage
             : emotions.find(el => el.default).displayImage;
-        return (<div className={['c-emotion-picker', !fullEmotion && 'c-emotion-picker--empty'].join(' ')}>
-            <div className="c-emotion-picker__image--active" onClick={this.toggleOpen}>
+        return (<div className={['c-emotion-picker', !fullEmotion && 'c-emotion-picker--empty'].join(' ')} onClick={this.toggleOpen}>
+            <div className="c-emotion-picker__image--active">
                 <img alt={emotion} src={displayImage} height="18" />
                 {!fullEmotion && <PlusSign />}
             </div>
