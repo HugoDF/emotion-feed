@@ -15,10 +15,16 @@ const Feed = ({ transactions, onTransactionEmotionChange }) => (
     </div>
 );
 
-const mapStateToProps = ({ transactions }) => {
+const mapStateToProps = ({ transactions, activeTransactionIds }) => {
     return {
-        transactions
-    }
+        transactions: transactions
+            .filter(({ id }) => activeTransactionIds.includes(id))
+            .sort(
+                (a, b) => activeTransactionIds.indexOf(a.id) > activeTransactionIds.indexOf(b.id)
+                    ? 1
+                    : -1
+            )
+    };
 };
 const mapDispatchToProps = (dispatch) => {
     return {

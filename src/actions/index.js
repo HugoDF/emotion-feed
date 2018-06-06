@@ -8,6 +8,19 @@ export function transactionEmotionChange(transaction, emotion) {
     };
 }
 
-export function searchQueryUpdate(query) {
+export const RESET_TRANSACTIONS = 'RESET_TRANSACTIONS';
 
+export function resetTransactions() {
+    return {
+        type: RESET_TRANSACTIONS
+    };
+}
+
+export const SET_FILTERED_TRANSACTIONS = 'SET_FILTERED_TRANSACTIONS';
+
+export function setFilteredTransactions(transactionIds) {
+    return {
+        type: SET_FILTERED_TRANSACTIONS,
+        transactionIds
+    };
 }

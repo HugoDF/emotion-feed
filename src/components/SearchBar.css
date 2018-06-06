@@ -1,0 +1,22 @@
+.c-search-bar {
+    position: relative;
+}
+.c-search-bar__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    height: 18px;
+}
+.c-search-bar__input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 30px;
+}
+.c-search-bar__input::-moz-placeholder {
+    color: #9db4c0;
+}
+.c-search-bar__input::-webkit-input-placeholder {
+    color: #9db4c0;
+}
