@@ -1,0 +1,42 @@
+.c-emotion-picker {
+    color: #A4BECB;
+    padding: 0 10px;
+    line-height: 32px;
+    font-size: 24px;
+    border-radius: 16px;
+    
+    box-shadow: 0px 2px 10px -1px rgba(152, 200, 233, 0.75);
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.c-emotion-picker__selector {
+    position: absolute;
+    bottom: 30px;
+    text-align: left;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 16px;
+    box-shadow: 0px 2px 10px -1px rgba(152, 200, 233, 0.75);
+    line-height: 32px;
+}
+.c-emotion-picker__selector__image:not(:last-child) {
+    margin-right: 10px;
+}
+.c-emotion-picker--empty > .c-emotion-picker__image--active::before {
+    content: "";
+    background-color: #A4BECB;
+    opacity: .5;
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+}
+.c-plus-sign {
+    display: inline-block;
+    margin-left: 5px;
+}
